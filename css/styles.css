@@ -2,10 +2,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Kumbh Sans", sans-serif;
   scroll-behavior: smooth;
 }
-
+/* 상단바  */
 .navbar {
   background: #ffffff;
   height: 65px;
@@ -18,7 +17,6 @@
   z-index: 999;
   box-shadow: 0 2px 5px rgb(0 0 0 / 30%);
 }
-
 .navbar__container {
   display: flex;
   justify-content: space-between;
@@ -76,7 +74,7 @@
   width: 100%;
 }
 
-.button {
+/* .button {
   display: flex;
   justify-content: column;
   text-decoration: none;
@@ -91,14 +89,14 @@
   background: linear-gradient(to right, #00bbff, #00de25, #00ff33);
   color: #fff;
   transition: all 0.3s ease;
-}
+} */
 
 .navbar__links:hover {
   color: #9518fc;
   transition: all 0.3s ease;
 }
 
-/* 하단 텝바  */
+/* 하단 바  */
 .tabBar {
   position: fixed;
   bottom: 0;
@@ -261,8 +259,6 @@
 
 /* Hero Section */
 .hero {
-  justify-content: center;
-  align-items: center;
   background: #ffffff;
   padding: 150px 0;
 }
@@ -274,20 +270,6 @@
   height: 90%;
   text-align: center;
   padding: 30px;
-}
-
-.highlight {
-  border-bottom: 4px solid rgb(132, 0, 255);
-}
-
-@media screen and (max-width: 768px) {
-  .hero__heading {
-    font-size: 60px;
-  }
-
-  .hero__description {
-    font-size: 40px;
-  }
 }
 
 /* About Section */
@@ -307,13 +289,8 @@
 }
 
 .main__container h1 {
-  background-color: #ff8177;
-  background-image: linear-gradient(to right, #000000 0%, #747170 100%);
+  color: #000000;
   background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
   margin-bottom: 80px;
   font-size: 60px;
 
@@ -334,12 +311,8 @@
 }
 
 .play h1 {
-  background-image: linear-gradient(to right, #000000 0%, #747170 100%);
+  color: rgb(0, 0, 0);
   background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
   margin-bottom: 80px;
   font-size: 60px;
 }
@@ -558,7 +531,7 @@ ul {
 }
 
 /* 모바일 */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
   .hero {
     justify-content: center;
     align-items: center;
@@ -591,6 +564,12 @@ ul {
     cursor: pointer;
     transition: transform var(--annmaition-duration) ease;
   }
+  .main {
+    max-width: 1200px;
+    justify-content: center;
+    display: flex;
+    padding: 0px;
+  }
   .contents .contentsBtn {
     width: 100px;
     height: 120px;
@@ -609,20 +588,10 @@ ul {
     padding: 0;
   }
   .main__container h1 {
-    background-image: linear-gradient(to right, #000000 0%, #747170 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
     margin-bottom: 30px;
     font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .mnuInfo .mnuBtn {
-    flex-direction: row;
     width: 47px;
     height: 47px;
     margin: 0;
@@ -637,19 +606,12 @@ ul {
     font-weight: bold;
   }
   /* 학식 */
-  .mnuMeal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .mnuMeal .btn {
-    margin: 0 15px 0 15px;
-  }
-  .mnuMeal .mnuBtn {
+  .mnuMeal .mnu-meal {
     width: 55px;
     height: 55px;
     border-radius: 20px;
     border: 2px solid var(--color-black);
+    box-shadow: 0 2px 5px rgb(0 0 0 / 30%);
   }
 
   /* 놀자!! */
@@ -666,13 +628,18 @@ ul {
   }
 
   .play h1 {
-    background-image: linear-gradient(to right, #000000 0%, #747170 100%);
     background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
     margin-bottom: 30px;
     font-size: 25px;
+  }
+  /* Footer */
+  .footer__container address {
+    display: block;
+    padding: 10px 0px;
+    width: 85%;
+    float: left;
+    line-height: 1.2;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
   }
 }
