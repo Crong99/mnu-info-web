@@ -552,7 +552,6 @@ ul {
     grid-template-columns: 1fr;
     align-items: center;
     justify-content: center;
-    width: 88%;
     height: 100%;
     padding: 0;
   }
@@ -584,16 +583,23 @@ ul {
   }
   /* 밥 먹자  */
 
-  .main {
-    padding: 0;
+  .eat {
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 88%;
   }
-  .main__container h1 {
+  .eat h1 {
+    background-size: 100%;
     margin-bottom: 30px;
     font-size: 25px;
   }
   .mnuInfo .mnuBtn {
-    width: 47px;
-    height: 47px;
+    width: 45px;
+    height: 45px;
     margin: 0;
     border-radius: 20px;
     border: 2px solid var(--color-black);
